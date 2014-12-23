@@ -18,7 +18,9 @@ case node['platform_family']
 end
 
 # Install MailCatcher
-gem_package "mailcatcher"
+gem_package "mailcatcher" do
+  gem_binary node['mailcatcher']['gem-binary']
+end
 
 if node['mailcatcher']['multiple']
   node['mailcatcher']['instances'].each_pair do |name, instance|
