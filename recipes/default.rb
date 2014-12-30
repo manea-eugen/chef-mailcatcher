@@ -43,7 +43,7 @@ if node['mailcatcher']['multiple']
 else
 
   # Generate the command
-  command = 'mailcatcher'
+  command = '/usr/local/bin/mailcatcher'
   command << "--http-ip #{node['mailcatcher']['http-ip']}"
   command << "--http-port #{node['mailcatcher']['http-port']}"
   command << "--smtp-ip #{node['mailcatcher']['smtp-ip']}"
